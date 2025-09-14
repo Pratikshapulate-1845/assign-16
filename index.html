@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text oprations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Text Operations</h1>
+   <div class="text-area">
+     <textarea id="inputText" rows="10" cols="50" placeholder="Enter  text ..."></textarea>
+   </div>
+   <div class="result" id="result">
+    <h2>Result:</h2>
+    <p id="output"></p>
+
+   </div>
+    <div class="buttons">
+     <button class="btn"  onclick="UpperCase()"> Uppercase</button>
+     <button class="btn"  onclick="LowerCase()"> Lowercase</button>
+    <button  class="btn" onclick="CountWords()">Count Words</button>
+    <button  class="btn" onclick="CountCharacters()">Count Charecters</button>
+
+
+<script>
+
+    const input=document.getElementById('inputText');
+    output=document.getElementById('output');
+    UpperCase=()=>{
+        let text=input.value;
+        output.innerText=text.toUpperCase();
+    }
+    LowerCase=()=>{
+        let text=input.value;
+        output.innerText=text.toLowerCase();
+    }
+    CountWords=()=>{
+        let text=input.value;
+        let words=text.trim().split(" ");
+        output.innerText=words.length;
+    }
+    CountCharacters=()=>{
+        let text=input.value;
+        output.innerText=text.length;
+    }
+    
+
+</script>
+</body>
+</html>
